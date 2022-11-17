@@ -4,9 +4,15 @@
 
 #### repository structure
 
+
 ```
 .
 ├── README.md
+├── _cloud
+│   ├── my_cloud.ipynb
+│   ├── my_gcp.png
+│   ├── my_gcp_experience.txt
+│   └── using_cloud_kernel.txt
 ├── _computer_architecture
 ├── _excel
 │   ├── README.md
@@ -27,6 +33,7 @@
 │   │       ├── json_2_dataframe.ipynb
 │   │       └── xml_2_dataframe.ipynb
 │   ├── machine_learning
+│   │   ├── README.md
 │   │   ├── _mlxtend
 │   │   │   ├── _mlxtend.ipynb
 │   │   │   ├── data_preprocessed
@@ -40,7 +47,19 @@
 │   │   │       └── init.csv
 │   │   ├── _optuna
 │   │   │   └── _optuna_.ipynb
-│   │   └── _scikit_learn
+│   │   ├── _scikit_learn
+│   │   │   ├── GBR_.csv
+│   │   │   ├── _scikit_learn.ipynb
+│   │   │   └── my_trial
+│   │   │       └── submitted
+│   │   │           ├── GB_tuned.csv
+│   │   │           ├── SR_tuned.csv
+│   │   │           ├── stregr_tuned.csv
+│   │   │           ├── voting_reg.csv
+│   │   │           ├── vtr_tuned.csv
+│   │   │           └── xgb_tuned.csv
+│   │   └── feature_scaling
+│   │       └── _feature_scaling.ipynb
 │   └── plot
 │       ├── matplotlib
 │       │   ├── _matplotlib_1.ipynb
@@ -106,6 +125,6 @@
     │   └── raw_house_train.csv
     └── raw_titanic.csv
 
-34 directories, 65 files
+38 directories, 79 files
 
 ```
