@@ -1,0 +1,158 @@
+[flycast0080@gcp-vm-test ~]$ ls
+[flycast0080@gcp-vm-test ~]$ pwd
+/home/flycast0080
+[flycast0080@gcp-vm-test ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh
+[flycast0080@gcp-vm-test ~]$ cd .ssh
+[flycast0080@gcp-vm-test .ssh]$ ls
+authorized_keys
+[flycast0080@gcp-vm-test .ssh]$ vi authorized_keys
+[flycast0080@gcp-vm-test .ssh]$ cd ..
+[flycast0080@gcp-vm-test ~]$ ls
+[flycast0080@gcp-vm-test ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .ssh  .viminfo
+[flycast0080@gcp-vm-test ~]$ mkdir dwloads
+[flycast0080@gcp-vm-test ~]$ rm -rf dwloads
+[flycast0080@gcp-vm-test ~]$ ls
+[flycast0080@gcp-vm-test ~]$ mkdir downloads
+[flycast0080@gcp-vm-test ~]$ cd downloads/
+[flycast0080@gcp-vm-test downloads]$ wget
+-bash: wget: command not found
+[flycast0080@gcp-vm-test downloads]$ yum install wget
+Loaded plugins: fastestmirror
+You need to be root to perform this command.
+[flycast0080@gcp-vm-test downloads]$ sudo passwd
+Changing password for user root.
+New password:
+BAD PASSWORD: The password fails the dictionary check - it is too simplistic/systematic
+Retype new password:
+passwd: all authentication tokens updated successfully.
+[flycast0080@gcp-vm-test downloads]$ su -
+Password:
+[root@gcp-vm-test ~]#
+[root@gcp-vm-test ~]#
+[root@gcp-vm-test ~]# yum install wget
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+epel/x86_64/metalink                                                                                                                                  |  21 kB  00:00:00
+ * base: mirror.web-ster.com
+ * epel: ziply.mm.fcix.net
+ * extras: mirrors.oit.uci.edu
+ * updates: mirror.grid.uchicago.edu
+base                                                                                                                                                  | 3.6 kB  00:00:00
+epel                                                                                                                                                  | 4.7 kB  00:00:00
+extras                                                                                                                                                | 2.9 kB  00:00:00
+google-cloud-sdk                                                                                                                                      | 1.4 kB  00:00:00
+google-compute-engine                                                                                                                                 | 1.4 kB  00:00:00
+updates                                                                                                                                               | 2.9 kB  00:00:00
+(1/9): base/7/x86_64/group_gz                                                                                                                         | 153 kB  00:00:00
+(2/9): epel/x86_64/group_gz                                                                                                                           |  98 kB  00:00:00
+(3/9): base/7/x86_64/primary_db                                                                                                                       | 6.1 MB  00:00:00
+(4/9): epel/x86_64/updateinfo                                                                                                                         | 1.0 MB  00:00:00
+(5/9): epel/x86_64/primary_db                                                                                                                         | 7.0 MB  00:00:00
+(6/9): extras/7/x86_64/primary_db                                                                                                                     | 249 kB  00:00:00
+(7/9): google-cloud-sdk/primary                                                                                                                       | 603 kB  00:00:00
+(8/9): google-compute-engine/primary                                                                                                                  | 4.1 kB  00:00:00
+(9/9): updates/7/x86_64/primary_db                                                                                                                    |  18 MB  00:00:00
+google-cloud-sdk                                                                                                                                                   4502/4502
+google-compute-engine                                                                                                                                                  11/11
+Resolving Dependencies
+--> Running transaction check
+---> Package wget.x86_64 0:1.14-18.el7_6.1 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================
+ Package                               Arch                                    Version                                           Repository                             Size
+=============================================================================================================================================================================
+Installing:
+ wget                                  x86_64                                  1.14-18.el7_6.1                                   base                                  547 k
+
+Transaction Summary
+=============================================================================================================================================================================
+Install  1 Package
+
+Total download size: 547 k
+Installed size: 2.0 M
+Is this ok [y/d/N]: y
+Downloading packages:
+wget-1.14-18.el7_6.1.x86_64.rpm                                                                                                                       | 547 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : wget-1.14-18.el7_6.1.x86_64                                                                                                                               1/1
+  Verifying  : wget-1.14-18.el7_6.1.x86_64                                                                                                                               1/1
+
+Installed:
+  wget.x86_64 0:1.14-18.el7_6.1
+
+Complete!
+[root@gcp-vm-test ~]# python
+Python 2.7.5 (default, Jun 28 2022, 15:30:04)
+[GCC 4.8.5 20150623 (Red Hat 4.8.5-44)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> exit()
+[root@gcp-vm-test ~]# whoami
+root
+[root@gcp-vm-test ~]# pwd
+/root
+[root@gcp-vm-test ~]# ls
+[root@gcp-vm-test ~]# ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  .cshrc  .pki  .tcshrc
+[root@gcp-vm-test ~]# wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+--2022-11-17 04:53:38--  https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+Resolving repo.anaconda.com (repo.anaconda.com)... 104.16.130.3, 104.16.131.3, 2606:4700::6810:8303, ...
+Connecting to repo.anaconda.com (repo.anaconda.com)|104.16.130.3|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773428196 (738M) [application/x-sh]
+Saving to: ‘Anaconda3-2022.10-Linux-x86_64.sh’
+
+100%[===================================================================================================================================>] 773,428,196  125MB/s   in 5.7s
+
+2022-11-17 04:53:43 (129 MB/s) - ‘Anaconda3-2022.10-Linux-x86_64.sh’ saved [773428196/773428196]
+
+[root@gcp-vm-test ~]# ls
+Anaconda3-2022.10-Linux-x86_64.sh
+[root@gcp-vm-test ~]# yum install bzip2
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.web-ster.com
+ * epel: ziply.mm.fcix.net
+ * extras: mirrors.oit.uci.edu
+ * updates: mirror.grid.uchicago.edu
+Resolving Dependencies
+--> Running transaction check
+---> Package bzip2.x86_64 0:1.0.6-13.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+=============================================================================================================================================================================
+ Package                                Arch                                    Version                                          Repository                             Size
+=============================================================================================================================================================================
+Installing:
+ bzip2                                  x86_64                                  1.0.6-13.el7                                     base                                   52 k
+
+Transaction Summary
+=============================================================================================================================================================================
+Install  1 Package
+
+Total download size: 52 k
+Installed size: 82 k
+Is this ok [y/d/N]: y
+Downloading packages:
+bzip2-1.0.6-13.el7.x86_64.rpm                                                                                                                         |  52 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : bzip2-1.0.6-13.el7.x86_64                                                                                                                                 1/1
+  Verifying  : bzip2-1.0.6-13.el7.x86_64                                                                                                                                 1/1
+
+Installed:
+  bzip2.x86_64 0:1.0.6-13.el7
+
+Complete!
+[root@gcp-vm-test ~]#
