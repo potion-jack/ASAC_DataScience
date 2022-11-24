@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비만도</title>
+</head>
+<body>
+    <!-- /formporc?myname=홍길동&myage=30    get은 해더에담김 -->
+    <form action="/formproc1" method="get" target="myi"> 
+        <h1> 비만도 </h1>   
+        <label>키:</label>
+        <input type="number" name="high"><br>
+        <label>몸무개:</label>
+        <input type="number" name="wei"><br>
+        <button>결과</button>
+        
+
+
+    </form>
+    <iframe name="myi"  width="100%" height="500" frameborder="0"></iframe>
+
+</body>
+</html>

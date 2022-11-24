@@ -1,0 +1,47 @@
+#################압축 파일로도 py파일이 보내지지 않아서, 이렇게 메일 첨부합니다 !!
+
+from flask import Flask, render_template, request
+
+app = Flask(__name__) # flask 객체 생성 #static_folder = 'my'이렇게 하면 my>image가 되어야함 디폴트는 static으로 설정되어있음
+#python famin.py cmd에서 실행하면 main이 name으로 들어옴
+
+@app.route("/")
+#@ : 데코레이션
+def root(): #root쪽으로 접근하면 reponse 아래와 같이 해주겠다
+    return "<h1>hello flask</h1>" 
+
+#값을 넣는 form만
+@app.route("/obesity")
+def obesity(): 
+    return render_template('obesity.html')
+
+#넣어진 값에서 연산과 가튼 것 실행 후
+@app.route("/obesityproc")
+def obesityproc(): 
+     #get 요청의 query string 데이터 추출
+    height = int(request.args['height'])
+    weight = int(request.args['weight'])
+    std_w = (height-100)*0.85
+    obesity = (weight/std_w)*100
+    if obesity <= 90:
+        result = "저체중"
+        imgs = '/static/image/돼지1.jpg'
+    elif 90<obesity <= 110:
+        result = "정상"
+        imgs = '/static/image/돼지2.jpg'
+    elif 110<obesity <= 120:
+        result = "과체중"
+        imgs = '/static/image/돼지3.jpg'
+    elif 120<obesity :
+        result = "비만"
+        imgs = '/static/image/돼지4.jpg'
+    return render_template("obesityproc.html",height=height,
+    weight=weight, result=result, imgs=imgs)
+
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=4000, debug=True) 
+    #host='0.0.0.0' : 웹서버가 클라이언트가 어떤 ip address 가지고 있어도 처리하겠다는 의미
+    #port : 내 프로세스 식별자 
+    #웹서버가 이제 구동 됨 = requests 처리
+    #debug=True : 파일 저장 안해도 수정된 코드로 실행

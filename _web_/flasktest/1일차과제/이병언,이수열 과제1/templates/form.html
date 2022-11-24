@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 계산기</title>
+</head>
+<body> 
+    <h1>비만도</h1>
+    <form action="/formproc" method="get">
+        <label>키:</label>
+        <input type = "number" name = "myheight"><br>
+        <label>몸무게:</label>
+        <input type = "number" name = "myweight"><br>
+        <button>결과</button>
+
+    </form>
+    <!-- <iframe name = "myi" width = "100%" height = "500" frameborder="0"></iframe> -->
+    {% if (bmi == 0): %}
+        <span>'값을 입력해주세요.'</span>
+    {% endif %}
+    {% if (bmi > 1) and (bmi < 90): %}
+        <span>'결과 : 저체중입니다'</span>
+        <img src = "/static/image/a.jpg">
+    {% endif %}
+    {% if (bmi > 90) and (bmi <= 110): %}
+        <span>'결과 : 정상'</span>
+        <img src = "/static/image/b.jpg">
+    {% endif %}
+    {% if (bmi > 110) and (bmi < 120): %}
+        <span>'결과 : 과체중입니다'</span>
+        <img src = "/static/image/c.jpg">
+    {% endif %}
+    {% if (bmi >= 120): %}
+        <span>'결과 : 비만'</span>
+        <img src = "/static/image/d.jpg">
+    {% endif %}<br>
+    키 {{myheight}}
+    몸무게 {{myweight}}
+    bmi {{bmi}}
+
+</body>
+</html>

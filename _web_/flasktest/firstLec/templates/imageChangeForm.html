@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        imgArr = ["/static/image/normal.jpg", "/static/image/fat.jpg","/static/image/high.jpg","/static/image/low.jpg"]
+        nCnt = 0
+        function fnPrev(){
+            nCnt-=1
+            if( nCnt==-1)
+                nCnt =0
+            myimg.src = imgArr[nCnt]
+        }
+        function fnNext(){
+            nCnt +=1
+            if( nCnt==4)
+                nCnt = 3
+            myimg.src = imgArr[nCnt]
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <img id="myimg" src="/static/image/normal.jpg">
+    </div>
+    <div style="text-align: center;">
+        <button onclick="fnPrev()">이전</button>&nbsp;&nbsp;&nbsp;
+        <button onclick="fnNext()">다음</button>
+    </div>
+</body>
+</html>

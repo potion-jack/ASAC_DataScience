@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>키:{{height}}</h1>
+    <h2>몸무게:{{weight}}</h2>
+    <h3>결과:{{result}}</h3>
+    {% if (result == '저체중') %}
+        <h4><img src='/static/image/a.jpg',target='myi'></h4>
+        <iframe name="myi", src="/" width='50%' height='500',frameborder='0'></iframe>
+    {% elif (result == '정상') %}
+        <h5><img src='/static/image/hojin.jpg'></h5>
+    {% elif (result == '과체중') %}
+        <h5><img src='/static/image/b.jpg'></h5>
+    {% else %}
+        <h5><img src='/static/image/c.jpg'></h5>
+    {% endif %}
+</body>
+</html>

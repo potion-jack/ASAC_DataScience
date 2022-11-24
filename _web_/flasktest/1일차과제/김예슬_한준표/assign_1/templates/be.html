@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+      width: 500px;
+      height : 300px;
+      border: 1px solid #b02b2b;
+    }
+    td {
+      border: 1px solid #ff0000;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .button {
+        background-color: blue;
+        color: white;
+        border-radius: 20px;
+        font-size : 15px
+    }
+    .button:hover {
+        background: tomato; 
+        color: white;
+    }
+
+    .b {background:red;}
+
+    .c {background:green;}
+</style>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form action="/bee" method="get" target="ifr">
+                    <label>키      </label>
+                    <input type="text" name="height"><br>
+                    <label>몸무게  </label>
+                    <input type="text" name="weight"><br><br>
+                    <button class="button" width="30px" height="20px">계산</button>
+                </form>
+                <br>
+                <iframe name="ifr"  width="600" height="300" frameborder="0"></iframe>
+                
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- /formproc?myname=홍길동&myage=30 -->
+    <form action="/formproc" method="get" target="myi">
+        <label>이름:</label>
+        <input type="text" name="myname"><br>
+        <label>나이:</label>
+        <input type="number" name="myage"><br>
+        <button>확인</button>
+    </form>
+    <iframe name="myi" width="100%" height="500" frameborder="0"></iframe>
+</body>
+</html>
+
