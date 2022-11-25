@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form  action="/formProc">
+        <label>이름:</label>
+        <input type="text" name="myname" required><br>
+        <label>나이:</label>
+        <input type="number" name="myage" min="1" max="120" step="0.1"><br>
+        <label>생일:</label>
+        <input type="date" name="mybirth"><br>
+        <label>이메일:</label>
+        <input type="email" name="myemail"><br>
+        <label>전화번호:</label>
+        <input type="tel" name="mytel" pattern="\d{3}-\d{3,4}-\d{4}" placeholder="000-0000-0000형식으로입력"><br>
+        <label>시간:</label>
+        <input type="time" name="mytime" min="09:00" max="18:00"><br>        
+        <hr>
+        <fieldset>
+            <legend>색상</legend>
+            <input type="radio" name="color" value="빨강"><label>빨강</label><br>
+            <input type="radio" name="color" value="파랑"><label>파랑</label><br>
+            <input type="radio" name="color" value="노랑"><label>노랑</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>취미</legend>
+            <input type="checkbox" name="hobby" value="영화"><label>영화</label><br>
+            <input type="checkbox" name="hobby" value="낚시"><label>낚시</label><br>
+            <input type="checkbox" name="hobby" value="골프"><label>골프</label><br>
+        </fieldset>
+        <hr>
+        <select name="company">
+            <option value="회사1">회사1</option>
+            <option value="회사2">회사2</option>
+            <option value="회사3">회사3</option>
+        </select>
+        <br>
+        <textarea name="mytxt" cols="100" rows="4"></textarea>
+        <br><br>
+        
+        <button>확인</button>
+    </form>
+</body>
+</html>
