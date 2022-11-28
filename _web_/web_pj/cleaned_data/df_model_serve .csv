@@ -1,0 +1,13 @@
+,count
+ -  TensorFlow Extended ,522
+ -  TorchServe ,167
+ -  ONNX Runtime ,224
+ -  Triton Inference Server ,70
+ -  OpenVINO Model Server ,93
+ -  KServe ,63
+ -  BentoML ,53
+ -  Multi Model Server ,62
+ -  Seldon Core ,47
+ -  MLflow ,621
+ - None,3320
+ - Other,129

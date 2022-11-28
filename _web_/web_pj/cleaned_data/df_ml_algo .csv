@@ -1,0 +1,15 @@
+,count
+ - Linear or Logistic Regression,11338
+ - Decision Trees or Random Forests,9373
+ - Gradient Boosting Machines ,5506
+ - Bayesian Approaches,3661
+ - Evolutionary Approaches,823
+ - Dense Neural Networks ,3476
+ - Convolutional Neural Networks,6006
+ - Generative Adversarial Networks,1166
+ - Recurrent Neural Networks,3451
+ - Transformer Networks ,2196
+ - Autoencoder Networks ,1234
+ - Graph Neural Networks,1422
+ - None,1326
+ - Other,538
