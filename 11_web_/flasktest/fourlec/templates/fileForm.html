@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/fileSend" method="post" enctype="multipart/form-data">
+        <label>이름 : </label>
+        <input type="text" name="myname"><br>
+        <label>파일 : </label>
+        <!-- <input type="file" name="myfile" accept="image/jpg, image/png"><br> -->
+        <!-- <input type="file" name="myfile" accept="*.txt, *.doc"><br> -->
+        <!-- <input type="file" name="myfile"><br> -->
+
+        <input type="file" name="myfile" accept="image/*"><br>
+        <button>전송</button>
+        
+        <!-- myname and myfile goes to fileSend  -->
+        <!-- query string should be body (header only for low memory data only) -->
+        <!-- to send things in body method = "post", to send file enctype='multipart/form-data' -->
+        <!-- <input type="file" name="myfile" accept="image/*"> -> for image file only -->
+        <!-- <input type="file" name="myfile" accept="image/jpg, image/png"> -> for image file + jpg, png -->
+        <!-- <input type="file" name="myfile" accept="*.txt, *.doc, *.hwp"><br>  -> for some text type data-->
+    </form>
+</body>
+</html>
